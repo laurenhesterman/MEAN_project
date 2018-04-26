@@ -1,0 +1,18 @@
+<h1>New Review for {{ thisrestraunt.name }}</h1>
+<form (submit)="createreview()">
+ 
+  <p> {{ newreview | json }} </p>
+  Your Name :<input type="text" name="name" [(ngModel)]="newreview.name" />
+  Review:<input type="text" name="content" [(ngModel)]="newreview.content" />
+  Stars (1-5):<input type="text" name="stars" [(ngModel)]="newreview.stars" />
+  <button type="submit" value="Add Review" >Submit Review</button>
+</form>
+
+<div *ngIf="errors" >
+  
+  
+     {{ errors.message | json }} 
+      
+
+</div>
+<a [routerLink]="['/']"> Cancel</a>

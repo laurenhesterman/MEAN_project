@@ -1,0 +1,17 @@
+<h2>All Restraunts</h2>
+<a [routerLink]="['restraunts/new']"> Add New Restraunt</a>
+
+<p *ngFor="let each of restraunts"> 
+        Restraunt:{{ each.name }}<br>
+        Cuisine Style: {{ each.cuisine }}<br>
+        
+        <button (click)="delete(each._id)">Delete This Item</button>
+         <!-- <button (click)="updateThis(each)">Edit This Item</button>  -->
+         <a [routerLink]="['/restraunts','edit', each._id]"> Edit This Item</a>
+         <a [routerLink]="['/reviews', each._id]"> Restraunt Reviews</a>
+        <!-- <br> --> 
+</p>
+
+
+
+

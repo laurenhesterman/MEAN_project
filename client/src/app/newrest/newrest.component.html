@@ -1,0 +1,22 @@
+<p>
+  newrest works!
+</p>
+<h1>New Restraunt</h1>
+<form (submit)="create()">
+ 
+  <p> {{ newrestraunt | json }} </p>
+  
+  Restraunt Name :<input type="text" name="name" [(ngModel)]="newrestraunt.name" />
+  Cuisine Type:<input type="text" name="cuisine" [(ngModel)]="newrestraunt.cuisine" />
+  
+  <button type="submit" value="Add Restraunt" >Submit Restraunt</button>
+</form>
+
+<div *ngIf="errors" >
+  
+  
+     {{ errors.message | json }} 
+      
+
+</div>
+<a [routerLink]="['/']"> Cancel</a>

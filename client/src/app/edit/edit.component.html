@@ -1,0 +1,18 @@
+<h1>Edit Restraunt</h1>
+<form (submit)="edit(new_restraunt._id)">
+ 
+  <!-- <p> {{ restraunt | json }} </p> -->
+  Restraunt Name :<input type="text" name="title" [(ngModel)]="new_restraunt.name" />
+  Price:<input type="text" name="price" [(ngModel)]="new_restraunt.cuisine" />
+ 
+  <button type="submit" value="Add restraunt" >Submit restraunt</button>
+</form>
+<a [routerLink]="['/']"> Cancel</a>
+
+<div *ngIf="errors" >
+  
+  
+     {{ errors.message | json }} 
+      
+
+</div>

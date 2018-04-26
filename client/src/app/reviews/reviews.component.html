@@ -1,0 +1,12 @@
+<h1>Reviews for {{ thisrestraunt.name }}</h1>
+<a [routerLink]="['/write', thisrestraunt._id]">New Review</a>
+
+<p *ngFor="let each of reviews"> 
+        Reviewer:{{ each.name }}<br>
+        Review: {{ each.content }}<br>
+        Stars: {{ each.stars }}<br>
+        <!-- Stars: {{ each.restid }}<br> -->
+               
+</p>
+
+
